@@ -1,0 +1,5 @@
+command_id: 743.763.220E25|fc=1,f=2021-
+test_cases:
+- expected_values:
+    OPHEV_BCM_TP_FR: null
+  response: '76304620E2500'

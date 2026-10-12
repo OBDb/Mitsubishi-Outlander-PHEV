@@ -1,0 +1,14 @@
+command_id: 743.763.220E03|fc=1
+test_cases:
+- expected_values:
+    OPHEV_FUEL_METER: 15.2
+  response: '76304620E0313'
+- expected_values:
+    OPHEV_FUEL_METER: 17.6
+  response: '76304620E0316'
+- expected_values:
+    OPHEV_FUEL_METER: 18.4
+  response: '76304620E0317'
+- expected_values:
+    OPHEV_FUEL_METER: 23.2
+  response: 76304620E031D

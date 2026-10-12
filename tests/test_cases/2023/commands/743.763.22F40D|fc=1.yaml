@@ -1,0 +1,23 @@
+command_id: 743.763.22F40D|fc=1
+test_cases:
+- expected_values:
+    OPHEV_SPD_METER: 0
+  response: 7630562F40D0000
+- expected_values:
+    OPHEV_SPD_METER: 43.6
+  response: 7630562F40D01B4
+- expected_values:
+    OPHEV_SPD_METER: 49.3
+  response: 7630562F40D01ED
+- expected_values:
+    OPHEV_SPD_METER: 52.7
+  response: 7630562F40D020F
+- expected_values:
+    OPHEV_SPD_METER: 57.5
+  response: 7630562F40D023F
+- expected_values:
+    OPHEV_SPD_METER: 57.9
+  response: 7630562F40D0243
+- expected_values:
+    OPHEV_SPD_METER: 59.1
+  response: 7630562F40D024F

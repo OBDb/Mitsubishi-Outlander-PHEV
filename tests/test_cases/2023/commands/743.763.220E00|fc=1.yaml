@@ -1,0 +1,11 @@
+command_id: 743.763.220E00|fc=1
+test_cases:
+- expected_values:
+    OPHEV_SPD_OUTPUT: 0
+  response: '76305620E000000'
+- expected_values:
+    OPHEV_SPD_OUTPUT: 40.69
+  response: 76305620E000FE5
+- expected_values:
+    OPHEV_SPD_OUTPUT: 54.46
+  response: '76305620E001546'
