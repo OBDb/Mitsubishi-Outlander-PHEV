@@ -1,0 +1,20 @@
+command_id: 743.763.220E01|fc=1
+test_cases:
+- expected_values:
+    OPHEV_ODO_743: 56021
+  response: 76306620E0100DAD5
+- expected_values:
+    OPHEV_ODO_743: 56022
+  response: 76306620E0100DAD6
+- expected_values:
+    OPHEV_ODO_743: 56059
+  response: 76306620E0100DAFB
+- expected_values:
+    OPHEV_ODO_743: 56061
+  response: 76306620E0100DAFD
+- expected_values:
+    OPHEV_ODO_743: 56062
+  response: 76306620E0100DAFE
+- expected_values:
+    OPHEV_ODO_743: 56063
+  response: 76306620E0100DAFF

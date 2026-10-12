@@ -1,4 +1,620 @@
-{ "commands": [
-
+{ "ecu": [
+    { "hdr": "688",  "type": "hvac" },
+    { "hdr": "743",  "type": "bodyControl" },
+    { "hdr": "773",  "type": "tpms" },
+    { "hdr": "DA15", "type": "engine" }
+  ],
+  "commands": [
+{ "hdr": "600", "rax": "500", "fcm1": true, "dbg": true, "cmd": {"21": "23"}, "freq": 15, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_TP_FL", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Pressure front left",    "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "OPHEV_TT_FL", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Temperature front left", "suggestedMetric": "frontLeftTireTemperature"}
+  ]},
+{ "hdr": "600", "rax": "500", "fcm1": true, "dbg": true, "cmd": {"21": "24"}, "freq": 15, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_TP_RL", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Pressure rear left",    "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "OPHEV_TT_RL", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Temperature rear left", "suggestedMetric": "rearLeftTireTemperature"}
+  ]},
+{ "hdr": "600", "rax": "500", "fcm1": true, "dbg": true, "cmd": {"21": "25"}, "freq": 15, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_TP_RR", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Pressure rear right",    "suggestedMetric": "rearRightTirePressure"},
+    {"id": "OPHEV_TT_RR", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Temperature rear right", "suggestedMetric": "rearRightTireTemperature"}
+  ]},
+{ "hdr": "600", "rax": "500", "fcm1": true, "dbg": true, "cmd": {"21": "26"}, "freq": 15, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_TP_FR", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Pressure front right",    "suggestedMetric": "frontRightTirePressure"},
+    {"id": "OPHEV_TT_FR", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Temperature front right", "suggestedMetric": "frontRightTireTemperature"}
+  ]},
+{ "hdr": "600", "rax": "500", "fcm1": true, "dbg": true, "cmd": {"21": "27"}, "freq": 15, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_TP_SPARE", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Pressure spare tire"},
+    {"id": "OPHEV_TT_SPARE", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Temperature spare tire"}
+  ]},
+{ "hdr": "600", "rax": "601", "fcm1": true, "dbg": true, "cmd": {"21": "0D"}, "freq": 1,
+  "signals": [
+    {"id": "OPHEV_KEYLESS_BUTTON", "path": "Keys", "fmt": {"bix": 32, "len": 8, "max": 255, "unit": "scalar" }, "name": "Keyless operating system button"}
+  ]},
+{ "hdr": "61E", "rax": "61F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_CMU_1_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 1 module voltage"}
+  ]},
+{ "hdr": "62E", "rax": "62F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_CMU_2_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 2 module voltage"}
+  ]},
+{ "hdr": "63E", "rax": "63F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_CMU_3_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 3 module voltage"}
+  ]},
+{ "hdr": "64E", "rax": "64F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_CMU_4_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 4 module voltage"}
+  ]},
+{ "hdr": "65E", "rax": "65F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_CMU_5_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 5 module voltage"}
+  ]},
+{ "hdr": "66E", "rax": "66F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_CMU_6_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 6 module voltage"}
+  ]},
+{ "hdr": "67E", "rax": "67F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_CMU_7_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 7 module voltage"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "10"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AC_INTERIOR_T",     "path": "Climate", "fmt": {           "len": 8, "max": 47.75, "min": -16,             "div": 4,   "add": -16, "unit": "celsius" }, "name": "Interior temperature"},
+    {"id": "OPHEV_AC_AIR_THERMO_SNS", "path": "Climate", "fmt": {"bix": 8,  "len": 8, "max": 47.75, "min": -16,             "div": 4,   "add": -16, "unit": "celsius" }, "name": "Air temperature sensor"},
+    {"id": "OPHEV_AC_PRES",           "path": "Climate", "fmt": {"bix": 16, "len": 8, "max": 3.3,               "mul": 3.3, "div": 255,             "unit": "unknown" }, "name": "Pressure"},
+    {"id": "OPHEV_AC_SOLAR_SNS",      "path": "Climate", "fmt": {"bix": 24, "len": 8, "max": 5.5,               "mul": 5.5, "div": 255,             "unit": "scalar"  }, "name": "Solar sensor"},
+    {"id": "OPHEV_AC_ECT",            "path": "Climate", "fmt": {"bix": 32, "len": 8, "max": 215,   "min": -40,                         "add": -40, "unit": "celsius" }, "name": "Engine coolant temperature", "suggestedMetric": "engineCoolantTemperature"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "11"}, "freq": 5, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AC_AAT", "path": "Climate", "fmt": { "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Ambient air temperature"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "13"}, "freq": 0.25, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AC_RPM", "path": "Climate", "fmt": {"bix": 8,  "len": 16, "max": 7000, "unit": "rpm"               }, "name": "Engine RPM",    "suggestedMetric": "engineSpeed"},
+    {"id": "OPHEV_AC_VSS", "path": "Climate", "fmt": {"bix": 24, "len": 16, "max": 250,  "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "22"}, "freq": 5, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AC_OUTPUT_VSS_DR", "path": "Climate", "fmt": {           "len": 8, "max": 16, "div": 2, "unit": "scalar" }, "name": "Driver side output speed"},
+    {"id": "OPHEV_AC_OUTPUT_VSS_AS", "path": "Climate", "fmt": {"bix": 8,  "len": 8, "max": 16, "div": 2, "unit": "scalar" }, "name": "Passenger side output speed"},
+    {"id": "OPHEV_AC_OUTPUT_MODE",   "path": "Climate", "fmt": {"bix": 16, "len": 8, "max": 16,           "unit": "scalar" }, "name": "Output mode"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "23"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AC_SWITCH",                       "path": "Climate", "fmt": {"bix": 6, "len": 1, "max": 1,   "unit": "offon" }, "name": "Air conditioning switch"},
+    {"id": "OPHEV_AC_A_C_COMPRESSOR_DRIVE_REQUEST", "path": "Climate", "fmt": {"bix": 7, "len": 1, "max": 1,   "unit": "offon" }, "name": "A/C compressor drive request"},
+    {"id": "OPHEV_AC_IDLE_UP_REQUEST",              "path": "Climate", "fmt": {"bix": 8, "len": 8, "max": 255, "unit": "rpm"   }, "name": "Idle up request"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "32"}, "freq": 3600, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AC_LEAK_INDICATOR_20", "path": "Climate", "fmt": {"bix": 5, "len": 1, "max": 1, "unit": "offon" }, "name": "Leak indicator at 20%"},
+    {"id": "OPHEV_AC_LEAK_INDICATOR",    "path": "Climate", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "offon" }, "name": "Leak indicator"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "34"}, "freq": 5, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AC_DRIVER_T",         "path": "Climate", "fmt": {           "len": 8, "max": 50, "div": 2, "unit": "celsius" }, "name": "Driver temperature setting"},
+    {"id": "OPHEV_AC_PASSENGER_T",      "path": "Climate", "fmt": {"bix": 8,  "len": 8, "max": 50, "div": 2, "unit": "celsius" }, "name": "Passenger temperature setting"},
+    {"id": "OPHEV_AC_DRIVER_T_CORR",    "path": "Climate", "fmt": {"bix": 16, "len": 8, "max": 50, "div": 2, "unit": "celsius" }, "name": "Corrected driver temperature setting"},
+    {"id": "OPHEV_AC_PASSENGER_T_CORR", "path": "Climate", "fmt": {"bix": 24, "len": 8, "max": 50, "div": 2, "unit": "celsius" }, "name": "Corrected passenger temperature setting"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "70"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AC_A_C_COMPRESSOR_DRIVE_FLAG", "path": "Climate", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "offon" }, "name": "A/C compressor drive flag"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "80"}, "freq": 3600, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AC_SYSTEM_WORK_TIME",           "path": "Climate", "fmt": {           "len": 24, "max": 83886075, "mul": 5, "unit": "scalar" }, "name": "System work time"},
+    {"id": "OPHEV_AC_COMPRESSOR_ON_OFF_COUNT",    "path": "Climate", "fmt": {"bix": 24, "len": 24, "max": 16777215,           "unit": "scalar" }, "name": "Compressor ON/OFF count"},
+    {"id": "OPHEV_AC_REAR_DEFOGGER_ON_OFF_COUNT", "path": "Climate", "fmt": {"bix": 48, "len": 16, "max": 65535,              "unit": "scalar" }, "name": "Rear defogger ON/OFF count"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "81"}, "freq": 3600, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AC_MAX_PRES",              "path": "Climate", "fmt": {"bix": 96,  "len": 8,  "max": 3.3,      "mul": 3.3, "div": 255, "unit": "unknown" }, "name": "Max pressure"},
+    {"id": "OPHEV_AC_CONDITIONER_WORK_TIME", "path": "Climate", "fmt": {"bix": 104, "len": 24, "max": 83886075, "mul": 5,               "unit": "scalar"  }, "name": "Conditioner work time"},
+    {"id": "OPHEV_AC_COMPRESSOR_WORK_TIME",  "path": "Climate", "fmt": {"bix": 128, "len": 24, "max": 83886075, "mul": 5,               "unit": "scalar"  }, "name": "Compressor work time"},
+    {"id": "OPHEV_AC_RECIRCULATION_TIME",    "path": "Climate", "fmt": {"bix": 176, "len": 16, "max": 327675,   "mul": 5,               "unit": "minutes" }, "name": "Recirculation time"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "83"}, "freq": 3600, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AC_FAN_M1_WORK_TIME", "path": "Climate", "fmt": {"bix": 40, "len": 24, "max": 83886075, "mul": 5, "unit": "scalar" }, "name": "Fan M1 work time"},
+    {"id": "OPHEV_AC_FAN_M2_WORK_TIME", "path": "Climate", "fmt": {"bix": 64, "len": 24, "max": 83886075, "mul": 5, "unit": "scalar" }, "name": "Fan M2 work time"}
+  ]},
+{ "hdr": "688", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"21": "15"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_AC_HV_I", "path": "Climate", "fmt": {"bix": 8,  "len": 16, "max": 328,  "min": -327, "div": 100, "add": -327, "unit": "amps"  }, "name": "Climate high-voltage current"},
+    {"id": "OPHEV_AC_HV_V", "path": "Climate", "fmt": {"bix": 24, "len": 16, "max": 6553,              "div": 10,               "unit": "volts" }, "name": "Climate high-voltage voltage"}
+  ]},
+{ "hdr": "688", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"21": "25"}, "freq": 1,
+  "signals": [
+    {"id": "OPHEV_AC_HEATER_STEP", "path": "Climate", "fmt": {          "len": 8, "max": 255,              "unit": "scalar" }, "name": "Electric heater step"},
+    {"id": "OPHEV_AC_HEATER_P",    "path": "Climate", "fmt": {"bix": 8, "len": 8, "max": 10200, "mul": 40, "unit": "watts"  }, "name": "Electric heater power"}
+  ]},
+{ "hdr": "68E", "rax": "68F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_CMU_8_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 8 module voltage"}
+  ]},
+{ "hdr": "69E", "rax": "69F", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_CMU_9_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 9 module voltage"}
+  ]},
+{ "hdr": "6A0", "rax": "514", "fcm1": true, "dbg": true, "cmd": {"21": "A3"}, "freq": 30, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_FLI", "path": "Fuel", "fmt": {"bix": 16, "len": 8, "max": 100, "add": -16, "unit": "percent" }, "name": "Fuel level", "suggestedMetric": "fuelTankLevel"}
+  ]},
+{ "hdr": "6A0", "rax": "514", "fcm1": true, "dbg": true, "cmd": {"21": "AD"}, "freq": 30, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_ODO", "path": "Trips", "fmt": { "len": 24, "blsb": true, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "6A0", "rax": "514", "fcm1": true, "dbg": true, "cmd": {"21": "AF"}, "freq": 5, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_DASHBOARD_V", "path": "Electrical", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "Dashboard voltage"}
+  ]},
+{ "hdr": "6A0", "rax": "514", "fcm1": true, "dbg": true, "cmd": {"21": "BC"}, "freq": 30, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MILEAGE_BEFORE_SERVICING",       "path": "Trips", "fmt": {           "len": 8, "max": 25500, "mul": 100, "unit": "kilometers" }, "name": "Mileage before servicing"},
+    {"id": "OPHEV_PERIOD_BEFORE_SERVICING_MONTHS", "path": "Trips", "fmt": {"bix": 32, "len": 8, "max": 255,               "unit": "scalar"     }, "name": "Months before servicing"}
+  ]},
+{ "hdr": "6AE", "rax": "6AF", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_CMU_10_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 10 module voltage"}
+  ]},
+{ "hdr": "6BE", "rax": "6BF", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_CMU_11_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 11 module voltage"}
+  ]},
+{ "hdr": "718", "rax": "719", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 1,
+  "signals": [
+    {"id": "OPHEV_ACC_TARGETS", "path": "Cruise control", "fmt": {"bix": 64, "len": 8, "max": 255, "unit": "scalar" }, "name": "Adaptive cruise control targets"}
+  ]},
+{ "hdr": "71A", "rax": "71B", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_LDW_SUPPLY_V", "path": "Electrical", "fmt": { "len": 8, "max": 2.55, "div": 100, "unit": "volts" }, "name": "Lane departure warning supply voltage"}
+  ]},
+{ "hdr": "724", "rax": "725", "fcm1": true, "dbg": true, "cmd": {"21": "12"}, "freq": 30,
+  "signals": [
+    {"id": "OPHEV_COMP_ODO", "path": "Climate", "fmt": { "len": 24, "max": 1677721, "div": 10, "unit": "kilometers" }, "name": "Electric compressor odometer"}
+  ]},
+{ "hdr": "73A", "rax": "73B", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 1,
+  "signals": [
+    {"id": "OPHEV_EV_SUPPLY_V", "path": "Battery", "fmt": {           "len": 16, "max": 655, "div": 100, "unit": "scalar" }, "name": "Electric vehicle unit supply voltage"},
+    {"id": "OPHEV_EV_IG1_V",    "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 655, "div": 100, "unit": "scalar" }, "name": "Electric vehicle unit ignition 1 voltage"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E00"}, "freq": 0.25, "dbgfilter": { "to": 2022, "from": 2024 },
+  "signals": [
+    {"id": "OPHEV_SPD_OUTPUT", "path": "Movement", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "kilometersPerHour" }, "name": "Speed output"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E01"}, "freq": 30, "dbgfilter": { "to": 2022, "from": 2024 },
+  "signals": [
+    {"id": "OPHEV_ODO_743", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E03"}, "freq": 1, "dbgfilter": { "to": 2022, "from": 2024 },
+  "signals": [
+    {"id": "OPHEV_FUEL_METER", "path": "Fuel", "fmt": { "len": 8, "max": 204, "mul": 4, "div": 5, "unit": "liters" }, "name": "Fuel meter"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E25"}, "freq": 15, "filter": { "from": 2021 }, "dbgfilter": { "to": 2022, "years": [2024], "from": 2026 },
+  "signals": [
+    {"id": "OPHEV_BCM_TP_FR", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "nullmin": 0, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E26"}, "freq": 15, "filter": { "from": 2021 }, "dbgfilter": { "to": 2022, "years": [2024], "from": 2026 },
+  "signals": [
+    {"id": "OPHEV_BCM_TP_FL", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "nullmin": 0, "unit": "psi" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E27"}, "freq": 15, "filter": { "from": 2021 }, "dbgfilter": { "to": 2022, "from": 2024 },
+  "signals": [
+    {"id": "OPHEV_BCM_TP_RR", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "nullmin": 0, "unit": "psi" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E28"}, "freq": 15, "filter": { "from": 2021 }, "dbgfilter": { "to": 2022, "years": [2024], "from": 2026 },
+  "signals": [
+    {"id": "OPHEV_BCM_TP_RL", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "nullmin": 0, "unit": "psi" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "F40D"}, "freq": 0.25, "dbgfilter": { "to": 2022, "from": 2024 },
+  "signals": [
+    {"id": "OPHEV_SPD_METER", "path": "Movement", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "kilometersPerHour" }, "name": "Speed meter", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "753", "rax": "754", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_RMOT_COOLANT_T", "path": "Drivetrain", "fmt": {"bix": 32, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Rear motor and inverter coolant temperature"}
+  ]},
+{ "hdr": "753", "rax": "754", "fcm1": true, "dbg": true, "cmd": {"21": "02"}, "freq": 1,
+  "signals": [
+    {"id": "OPHEV_RMOT_CAP_V", "path": "Drivetrain", "fmt": {"bix": 32, "len": 16, "max": 65535, "unit": "volts" }, "name": "Rear inverter capacitor voltage"}
+  ]},
+{ "hdr": "755", "rax": "756", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "OPHEV_FMOT_COOLANT_T", "path": "Drivetrain", "fmt": {"bix": 32, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Front motor and inverter coolant temperature"}
+  ]},
+{ "hdr": "755", "rax": "756", "fcm1": true, "dbg": true, "cmd": {"21": "02"}, "freq": 1,
+  "signals": [
+    {"id": "OPHEV_FMOT_CAP_V",       "path": "Drivetrain", "fmt": {"bix": 32,  "len": 16, "max": 65535,                         "unit": "volts"   }, "name": "Front inverter capacitor voltage"},
+    {"id": "OPHEV_FMOT_COIL_MAX_T",  "path": "Drivetrain", "fmt": {"bix": 64,  "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front motor coil maximum temperature"},
+    {"id": "OPHEV_FMOT_IGBT_MAX_T",  "path": "Drivetrain", "fmt": {"bix": 72,  "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front inverter transistor maximum temperature"},
+    {"id": "OPHEV_FMOT_CPU_T",       "path": "Drivetrain", "fmt": {"bix": 80,  "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front inverter processor temperature"},
+    {"id": "OPHEV_FMOT_IGBT_EST_T",  "path": "Drivetrain", "fmt": {"bix": 88,  "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front inverter transistor estimated temperature"},
+    {"id": "OPHEV_FMOT_CAP_T",       "path": "Drivetrain", "fmt": {"bix": 96,  "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front inverter capacitor temperature"},
+    {"id": "OPHEV_FMOT_IGBT1_T",     "path": "Drivetrain", "fmt": {"bix": 176, "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front inverter transistor 1 temperature"},
+    {"id": "OPHEV_FMOT_IGBT2_T",     "path": "Drivetrain", "fmt": {"bix": 184, "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front inverter transistor 2 temperature"},
+    {"id": "OPHEV_FMOT_COIL_U_T",    "path": "Drivetrain", "fmt": {"bix": 192, "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front motor u-phase coil temperature"},
+    {"id": "OPHEV_FMOT_COIL_W_T",    "path": "Drivetrain", "fmt": {"bix": 200, "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front motor w-phase coil temperature"},
+    {"id": "OPHEV_FMOT_COOLANT_REQ", "path": "Drivetrain", "fmt": {"bix": 208, "len": 8,  "max": 255,                           "unit": "liters"  }, "name": "Front motor requested coolant flow"},
+    {"id": "OPHEV_FMOT_CPU_TIME",    "path": "Drivetrain", "fmt": {"bix": 216, "len": 16, "max": 65535,                         "unit": "scalar"  }, "name": "Front inverter processor operating time"},
+    {"id": "OPHEV_FMOT_SW_VER",      "path": "Drivetrain", "fmt": {"bix": 232, "len": 8,  "max": 255,                           "unit": "scalar"  }, "name": "Front motor controller software version"},
+    {"id": "OPHEV_FMOT_IGBT3_T",     "path": "Drivetrain", "fmt": {"bix": 240, "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius" }, "name": "Front inverter transistor 3 temperature"}
+  ]},
+{ "hdr": "761", "rax": "762", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 1,
+  "signals": [
+    {"id": "OPHEV_BMU_CELL_MAX_V",    "path": "Battery", "fmt": {"bix": 16,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts"       }, "name": "Highest cell voltage"},
+    {"id": "OPHEV_BMU_CELL_MAX_ID",   "path": "Battery", "fmt": {"bix": 32,  "len": 8,  "max": 255,                "unit": "scalar"      }, "name": "Highest voltage cell number"},
+    {"id": "OPHEV_BMU_CELL_MIN_V",    "path": "Battery", "fmt": {"bix": 40,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts"       }, "name": "Lowest cell voltage"},
+    {"id": "OPHEV_BMU_CELL_MIN_ID",   "path": "Battery", "fmt": {"bix": 56,  "len": 8,  "max": 255,                "unit": "scalar"      }, "name": "Lowest voltage cell number"},
+    {"id": "OPHEV_BMU_RES_MAX",       "path": "Battery", "fmt": {"bix": 200, "len": 8,  "max": 25.5,  "div": 10,   "unit": "megaohms"    }, "name": "Highest cell internal resistance"},
+    {"id": "OPHEV_BMU_RES_MIN",       "path": "Battery", "fmt": {"bix": 208, "len": 8,  "max": 25.5,  "div": 10,   "unit": "megaohms"    }, "name": "Lowest cell internal resistance"},
+    {"id": "OPHEV_BMU_CAP",           "path": "Battery", "fmt": {"bix": 216, "len": 16, "max": 6553,  "div": 10,   "unit": "ampereHours" }, "name": "Battery capacity"},
+    {"id": "OPHEV_BMU_REM_CAP",       "path": "Battery", "fmt": {"bix": 232, "len": 16, "max": 6553,  "div": 10,   "unit": "ampereHours" }, "name": "Battery remaining capacity"},
+    {"id": "OPHEV_BMU_MAX_IN_P",      "path": "Battery", "fmt": {"bix": 248, "len": 8,  "max": 63.75, "div": 4,    "unit": "kilowatts"   }, "name": "Maximum charging power"},
+    {"id": "OPHEV_BMU_MAX_OUT_P",     "path": "Battery", "fmt": {"bix": 256, "len": 8,  "max": 63.75, "div": 4,    "unit": "kilowatts"   }, "name": "Maximum output power"},
+    {"id": "OPHEV_BMU_CELL_DIFF_V",   "path": "Battery", "fmt": {"bix": 264, "len": 16, "max": 65.53, "div": 1000, "unit": "volts"       }, "name": "Cell voltage difference"},
+    {"id": "OPHEV_BMU_CELL_TGT_V",    "path": "Battery", "fmt": {"bix": 280, "len": 16, "max": 65.53, "div": 1000, "unit": "volts"       }, "name": "Target cell voltage"},
+    {"id": "OPHEV_BMU_OR_SUPPLY_V",   "path": "Battery", "fmt": {"bix": 296, "len": 8,  "max": 25.5,  "div": 10,   "unit": "volts"       }, "name": "Battery unit OR supply voltage"},
+    {"id": "OPHEV_BMU_IGCT_SUPPLY_V", "path": "Battery", "fmt": {"bix": 304, "len": 8,  "max": 25.5,  "div": 10,   "unit": "volts"       }, "name": "Battery unit ignition supply voltage"},
+    {"id": "OPHEV_BMU_FAN_DUTY",      "path": "Battery", "fmt": {"bix": 312, "len": 8,  "max": 255,                "unit": "percent"     }, "name": "Battery cooling fan duty"},
+    {"id": "OPHEV_BMU_CELL_AVG_V",    "path": "Battery", "fmt": {"bix": 384, "len": 16, "max": 65.53, "div": 1000, "unit": "volts"       }, "name": "Average cell voltage"},
+    {"id": "OPHEV_BMU_DIFF_LIMIT_V",  "path": "Battery", "fmt": {"bix": 400, "len": 16, "max": 65.53, "div": 1000, "unit": "volts"       }, "name": "Cell voltage difference fault limit"},
+    {"id": "OPHEV_BMU_RES_DIFF_MAX",  "path": "Battery", "fmt": {"bix": 416, "len": 8,  "max": 25.5,  "div": 10,   "unit": "megaohms"    }, "name": "Cell internal resistance difference maximum"}
+  ]},
+{ "hdr": "761", "rax": "762", "fcm1": true, "dbg": true, "cmd": {"21": "02"}, "freq": 1,
+  "signals": [
+    {"id": "OPHEV_BMU_CELL_01_V", "path": "Battery.Cells", "fmt": {             "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 1 voltage"},
+    {"id": "OPHEV_BMU_CELL_02_V", "path": "Battery.Cells", "fmt": {"bix": 16,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 2 voltage"},
+    {"id": "OPHEV_BMU_CELL_03_V", "path": "Battery.Cells", "fmt": {"bix": 32,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 3 voltage"},
+    {"id": "OPHEV_BMU_CELL_04_V", "path": "Battery.Cells", "fmt": {"bix": 48,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 4 voltage"},
+    {"id": "OPHEV_BMU_CELL_05_V", "path": "Battery.Cells", "fmt": {"bix": 64,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 5 voltage"},
+    {"id": "OPHEV_BMU_CELL_06_V", "path": "Battery.Cells", "fmt": {"bix": 80,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 6 voltage"},
+    {"id": "OPHEV_BMU_CELL_07_V", "path": "Battery.Cells", "fmt": {"bix": 96,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 7 voltage"},
+    {"id": "OPHEV_BMU_CELL_08_V", "path": "Battery.Cells", "fmt": {"bix": 112,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 8 voltage"},
+    {"id": "OPHEV_BMU_CELL_09_V", "path": "Battery.Cells", "fmt": {"bix": 128,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 9 voltage"},
+    {"id": "OPHEV_BMU_CELL_10_V", "path": "Battery.Cells", "fmt": {"bix": 144,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 10 voltage"},
+    {"id": "OPHEV_BMU_CELL_11_V", "path": "Battery.Cells", "fmt": {"bix": 160,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 11 voltage"},
+    {"id": "OPHEV_BMU_CELL_12_V", "path": "Battery.Cells", "fmt": {"bix": 176,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 12 voltage"},
+    {"id": "OPHEV_BMU_CELL_13_V", "path": "Battery.Cells", "fmt": {"bix": 192,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 13 voltage"},
+    {"id": "OPHEV_BMU_CELL_14_V", "path": "Battery.Cells", "fmt": {"bix": 208,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 14 voltage"},
+    {"id": "OPHEV_BMU_CELL_15_V", "path": "Battery.Cells", "fmt": {"bix": 224,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 15 voltage"},
+    {"id": "OPHEV_BMU_CELL_16_V", "path": "Battery.Cells", "fmt": {"bix": 240,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 16 voltage"},
+    {"id": "OPHEV_BMU_CELL_17_V", "path": "Battery.Cells", "fmt": {"bix": 256,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 17 voltage"},
+    {"id": "OPHEV_BMU_CELL_18_V", "path": "Battery.Cells", "fmt": {"bix": 272,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 18 voltage"},
+    {"id": "OPHEV_BMU_CELL_19_V", "path": "Battery.Cells", "fmt": {"bix": 288,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 19 voltage"},
+    {"id": "OPHEV_BMU_CELL_20_V", "path": "Battery.Cells", "fmt": {"bix": 304,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 20 voltage"},
+    {"id": "OPHEV_BMU_CELL_21_V", "path": "Battery.Cells", "fmt": {"bix": 320,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 21 voltage"},
+    {"id": "OPHEV_BMU_CELL_22_V", "path": "Battery.Cells", "fmt": {"bix": 336,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 22 voltage"},
+    {"id": "OPHEV_BMU_CELL_23_V", "path": "Battery.Cells", "fmt": {"bix": 352,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 23 voltage"},
+    {"id": "OPHEV_BMU_CELL_24_V", "path": "Battery.Cells", "fmt": {"bix": 368,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 24 voltage"},
+    {"id": "OPHEV_BMU_CELL_25_V", "path": "Battery.Cells", "fmt": {"bix": 384,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 25 voltage"},
+    {"id": "OPHEV_BMU_CELL_26_V", "path": "Battery.Cells", "fmt": {"bix": 400,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 26 voltage"},
+    {"id": "OPHEV_BMU_CELL_27_V", "path": "Battery.Cells", "fmt": {"bix": 416,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 27 voltage"},
+    {"id": "OPHEV_BMU_CELL_28_V", "path": "Battery.Cells", "fmt": {"bix": 432,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 28 voltage"},
+    {"id": "OPHEV_BMU_CELL_29_V", "path": "Battery.Cells", "fmt": {"bix": 448,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 29 voltage"},
+    {"id": "OPHEV_BMU_CELL_30_V", "path": "Battery.Cells", "fmt": {"bix": 464,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 30 voltage"},
+    {"id": "OPHEV_BMU_CELL_31_V", "path": "Battery.Cells", "fmt": {"bix": 480,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 31 voltage"},
+    {"id": "OPHEV_BMU_CELL_32_V", "path": "Battery.Cells", "fmt": {"bix": 496,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 32 voltage"},
+    {"id": "OPHEV_BMU_CELL_33_V", "path": "Battery.Cells", "fmt": {"bix": 512,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 33 voltage"},
+    {"id": "OPHEV_BMU_CELL_34_V", "path": "Battery.Cells", "fmt": {"bix": 528,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 34 voltage"},
+    {"id": "OPHEV_BMU_CELL_35_V", "path": "Battery.Cells", "fmt": {"bix": 544,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 35 voltage"},
+    {"id": "OPHEV_BMU_CELL_36_V", "path": "Battery.Cells", "fmt": {"bix": 560,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 36 voltage"},
+    {"id": "OPHEV_BMU_CELL_37_V", "path": "Battery.Cells", "fmt": {"bix": 576,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 37 voltage"},
+    {"id": "OPHEV_BMU_CELL_38_V", "path": "Battery.Cells", "fmt": {"bix": 592,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 38 voltage"},
+    {"id": "OPHEV_BMU_CELL_39_V", "path": "Battery.Cells", "fmt": {"bix": 608,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 39 voltage"},
+    {"id": "OPHEV_BMU_CELL_40_V", "path": "Battery.Cells", "fmt": {"bix": 624,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 40 voltage"},
+    {"id": "OPHEV_BMU_CELL_41_V", "path": "Battery.Cells", "fmt": {"bix": 640,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 41 voltage"},
+    {"id": "OPHEV_BMU_CELL_42_V", "path": "Battery.Cells", "fmt": {"bix": 656,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 42 voltage"},
+    {"id": "OPHEV_BMU_CELL_43_V", "path": "Battery.Cells", "fmt": {"bix": 672,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 43 voltage"},
+    {"id": "OPHEV_BMU_CELL_44_V", "path": "Battery.Cells", "fmt": {"bix": 688,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 44 voltage"},
+    {"id": "OPHEV_BMU_CELL_45_V", "path": "Battery.Cells", "fmt": {"bix": 704,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 45 voltage"},
+    {"id": "OPHEV_BMU_CELL_46_V", "path": "Battery.Cells", "fmt": {"bix": 720,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 46 voltage"},
+    {"id": "OPHEV_BMU_CELL_47_V", "path": "Battery.Cells", "fmt": {"bix": 736,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 47 voltage"},
+    {"id": "OPHEV_BMU_CELL_48_V", "path": "Battery.Cells", "fmt": {"bix": 752,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 48 voltage"},
+    {"id": "OPHEV_BMU_CELL_49_V", "path": "Battery.Cells", "fmt": {"bix": 768,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 49 voltage"},
+    {"id": "OPHEV_BMU_CELL_50_V", "path": "Battery.Cells", "fmt": {"bix": 784,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 50 voltage"},
+    {"id": "OPHEV_BMU_CELL_51_V", "path": "Battery.Cells", "fmt": {"bix": 800,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 51 voltage"},
+    {"id": "OPHEV_BMU_CELL_52_V", "path": "Battery.Cells", "fmt": {"bix": 816,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 52 voltage"},
+    {"id": "OPHEV_BMU_CELL_53_V", "path": "Battery.Cells", "fmt": {"bix": 832,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 53 voltage"},
+    {"id": "OPHEV_BMU_CELL_54_V", "path": "Battery.Cells", "fmt": {"bix": 848,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 54 voltage"},
+    {"id": "OPHEV_BMU_CELL_55_V", "path": "Battery.Cells", "fmt": {"bix": 864,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 55 voltage"},
+    {"id": "OPHEV_BMU_CELL_56_V", "path": "Battery.Cells", "fmt": {"bix": 880,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 56 voltage"},
+    {"id": "OPHEV_BMU_CELL_57_V", "path": "Battery.Cells", "fmt": {"bix": 896,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 57 voltage"},
+    {"id": "OPHEV_BMU_CELL_58_V", "path": "Battery.Cells", "fmt": {"bix": 912,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 58 voltage"},
+    {"id": "OPHEV_BMU_CELL_59_V", "path": "Battery.Cells", "fmt": {"bix": 928,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 59 voltage"},
+    {"id": "OPHEV_BMU_CELL_60_V", "path": "Battery.Cells", "fmt": {"bix": 944,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 60 voltage"},
+    {"id": "OPHEV_BMU_CELL_61_V", "path": "Battery.Cells", "fmt": {"bix": 960,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 61 voltage"},
+    {"id": "OPHEV_BMU_CELL_62_V", "path": "Battery.Cells", "fmt": {"bix": 976,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 62 voltage"},
+    {"id": "OPHEV_BMU_CELL_63_V", "path": "Battery.Cells", "fmt": {"bix": 992,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 63 voltage"},
+    {"id": "OPHEV_BMU_CELL_64_V", "path": "Battery.Cells", "fmt": {"bix": 1008, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 64 voltage"},
+    {"id": "OPHEV_BMU_CELL_65_V", "path": "Battery.Cells", "fmt": {"bix": 1024, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 65 voltage"},
+    {"id": "OPHEV_BMU_CELL_66_V", "path": "Battery.Cells", "fmt": {"bix": 1040, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 66 voltage"},
+    {"id": "OPHEV_BMU_CELL_67_V", "path": "Battery.Cells", "fmt": {"bix": 1056, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 67 voltage"},
+    {"id": "OPHEV_BMU_CELL_68_V", "path": "Battery.Cells", "fmt": {"bix": 1072, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 68 voltage"},
+    {"id": "OPHEV_BMU_CELL_69_V", "path": "Battery.Cells", "fmt": {"bix": 1088, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 69 voltage"},
+    {"id": "OPHEV_BMU_CELL_70_V", "path": "Battery.Cells", "fmt": {"bix": 1104, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 70 voltage"},
+    {"id": "OPHEV_BMU_CELL_71_V", "path": "Battery.Cells", "fmt": {"bix": 1120, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 71 voltage"},
+    {"id": "OPHEV_BMU_CELL_72_V", "path": "Battery.Cells", "fmt": {"bix": 1136, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 72 voltage"},
+    {"id": "OPHEV_BMU_CELL_73_V", "path": "Battery.Cells", "fmt": {"bix": 1152, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 73 voltage"},
+    {"id": "OPHEV_BMU_CELL_74_V", "path": "Battery.Cells", "fmt": {"bix": 1168, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 74 voltage"},
+    {"id": "OPHEV_BMU_CELL_75_V", "path": "Battery.Cells", "fmt": {"bix": 1184, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 75 voltage"},
+    {"id": "OPHEV_BMU_CELL_76_V", "path": "Battery.Cells", "fmt": {"bix": 1200, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 76 voltage"},
+    {"id": "OPHEV_BMU_CELL_77_V", "path": "Battery.Cells", "fmt": {"bix": 1216, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 77 voltage"},
+    {"id": "OPHEV_BMU_CELL_78_V", "path": "Battery.Cells", "fmt": {"bix": 1232, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 78 voltage"},
+    {"id": "OPHEV_BMU_CELL_79_V", "path": "Battery.Cells", "fmt": {"bix": 1248, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 79 voltage"},
+    {"id": "OPHEV_BMU_CELL_80_V", "path": "Battery.Cells", "fmt": {"bix": 1264, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell 80 voltage"}
+  ]},
+{ "hdr": "761", "rax": "762", "fcm1": true, "dbg": true, "cmd": {"21": "14"}, "freq": 1,
+  "signals": [
+    {"id": "OPHEV_DBCAM1_RAW_CNT",  "path": "Battery", "fmt": {            "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM1 value, raw count"},
+    {"id": "OPHEV_DBCAM2_RAW_CNT",  "path": "Battery", "fmt": {"bix": 16,  "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM2 value, raw count"},
+    {"id": "OPHEV_DBCAM3_RAW_CNT",  "path": "Battery", "fmt": {"bix": 32,  "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM3 value, raw count"},
+    {"id": "OPHEV_DBCAM4_RAW_CNT",  "path": "Battery", "fmt": {"bix": 48,  "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM4 value, raw count"},
+    {"id": "OPHEV_DBCAM5_RAW_CNT",  "path": "Battery", "fmt": {"bix": 64,  "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM5 value, raw count"},
+    {"id": "OPHEV_DBCAM6_RAW_CNT",  "path": "Battery", "fmt": {"bix": 80,  "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM6 value, raw count"},
+    {"id": "OPHEV_DBCAM7_RAW_CNT",  "path": "Battery", "fmt": {"bix": 96,  "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM7 value, raw count"},
+    {"id": "OPHEV_DBCAM8_RAW_CNT",  "path": "Battery", "fmt": {"bix": 112, "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM8 value, raw count"},
+    {"id": "OPHEV_DBCAM9_RAW_CNT",  "path": "Battery", "fmt": {"bix": 128, "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM9 value, raw count"},
+    {"id": "OPHEV_DBCAM10_RAW_CNT", "path": "Battery", "fmt": {"bix": 144, "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM10 value, raw count"}
+  ]},
+{ "hdr": "761", "rax": "762", "fcm1": true, "dbg": true, "cmd": {"21": "15"}, "freq": 30,
+  "signals": [
+    {"id": "OPHEV_DBCAM1_ODO_RAW_CNT",  "path": "Battery", "fmt": {            "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM1 odometer, raw count"},
+    {"id": "OPHEV_DBCAM2_ODO_RAW_CNT",  "path": "Battery", "fmt": {"bix": 16,  "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM2 odometer, raw count"},
+    {"id": "OPHEV_DBCAM3_ODO_RAW_CNT",  "path": "Battery", "fmt": {"bix": 32,  "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM3 odometer, raw count"},
+    {"id": "OPHEV_DBCAM4_ODO_RAW_CNT",  "path": "Battery", "fmt": {"bix": 48,  "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM4 odometer, raw count"},
+    {"id": "OPHEV_DBCAM5_ODO_RAW_CNT",  "path": "Battery", "fmt": {"bix": 64,  "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM5 odometer, raw count"},
+    {"id": "OPHEV_DBCAM6_ODO_RAW_CNT",  "path": "Battery", "fmt": {"bix": 80,  "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM6 odometer, raw count"},
+    {"id": "OPHEV_DBCAM7_ODO_RAW_CNT",  "path": "Battery", "fmt": {"bix": 96,  "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM7 odometer, raw count"},
+    {"id": "OPHEV_DBCAM8_ODO_RAW_CNT",  "path": "Battery", "fmt": {"bix": 112, "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM8 odometer, raw count"},
+    {"id": "OPHEV_DBCAM9_ODO_RAW_CNT",  "path": "Battery", "fmt": {"bix": 128, "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM9 odometer, raw count"},
+    {"id": "OPHEV_DBCAM10_ODO_RAW_CNT", "path": "Battery", "fmt": {"bix": 144, "len": 16, "max": 65535, "unit": "scalar" }, "name": "DBCAM10 odometer, raw count"}
+  ]},
+{ "hdr": "765", "rax": "766", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 1,
+  "signals": [
+    {"id": "OPHEV_OBC_CHG_CNT_100V", "path": "Battery", "fmt": {           "len": 16, "max": 65535, "unit": "scalar" }, "name": "Charge count at 100 v"},
+    {"id": "OPHEV_OBC_CHG_CNT_200V", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 65535, "unit": "scalar" }, "name": "Charge count at 200 v"}
+  ]},
+{ "hdr": "773", "rax": "774", "fcm1": true, "din": "92", "dbg": true, "cmd": {"21": "A1"}, "freq": 15, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_TPMS_TP_FL", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Front left tire pressure",    "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "OPHEV_TPMS_TT_FL", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Front left tire temperature", "suggestedMetric": "frontLeftTireTemperature"}
+  ]},
+{ "hdr": "773", "rax": "774", "fcm1": true, "din": "92", "dbg": true, "cmd": {"21": "A2"}, "freq": 15, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_TPMS_TP_RR", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Rear right tire pressure",    "suggestedMetric": "rearRightTirePressure"},
+    {"id": "OPHEV_TPMS_TT_RR", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Rear right tire temperature", "suggestedMetric": "rearRightTireTemperature"}
+  ]},
+{ "hdr": "773", "rax": "774", "fcm1": true, "din": "92", "dbg": true, "cmd": {"21": "A3"}, "freq": 15, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_TPMS_TP_RL", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Rear left tire pressure",    "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "OPHEV_TPMS_TT_RL", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Rear left tire temperature", "suggestedMetric": "rearLeftTireTemperature"}
+  ]},
+{ "hdr": "773", "rax": "774", "fcm1": true, "din": "92", "dbg": true, "cmd": {"21": "A4"}, "freq": 15, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_TPMS_TP_SPARE", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Spare tire pressure"},
+    {"id": "OPHEV_TPMS_TT_SPARE", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Spare tire temperature"}
+  ]},
+{ "hdr": "773", "rax": "774", "fcm1": true, "din": "92", "dbg": true, "cmd": {"21": "A5"}, "freq": 15, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_TPMS_TP_FR", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Front right tire pressure",    "suggestedMetric": "frontRightTirePressure"},
+    {"id": "OPHEV_TPMS_TT_FR", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Front right tire temperature", "suggestedMetric": "frontRightTireTemperature"}
+  ]},
+{ "hdr": "773", "rax": "774", "fcm1": true, "din": "92", "dbg": true, "cmd": {"21": "A8"}, "freq": 15, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_TPMS_TP_1", "path": "Tires", "fmt": {"bix": 120, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Tire #1 pressure"},
+    {"id": "OPHEV_TPMS_TP_2", "path": "Tires", "fmt": {"bix": 128, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Tire #2 pressure"},
+    {"id": "OPHEV_TPMS_TP_3", "path": "Tires", "fmt": {"bix": 136, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Tire #3 pressure"},
+    {"id": "OPHEV_TPMS_TP_4", "path": "Tires", "fmt": {"bix": 144, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Tire #4 pressure"},
+    {"id": "OPHEV_TPMS_TT_1", "path": "Tires", "fmt": {"bix": 160, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Tire #1 temperature"},
+    {"id": "OPHEV_TPMS_TT_2", "path": "Tires", "fmt": {"bix": 168, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Tire #2 temperature"},
+    {"id": "OPHEV_TPMS_TT_3", "path": "Tires", "fmt": {"bix": 176, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Tire #3 temperature"},
+    {"id": "OPHEV_TPMS_TT_4", "path": "Tires", "fmt": {"bix": 184, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Tire #4 temperature"}
+  ]},
+{ "hdr": "784", "rax": "785", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 0.25, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_ABS_FL_VSS", "path": "Movement", "fmt": {           "len": 16, "max": 655.35, "div": 100, "unit": "kilometersPerHour" }, "name": "Front left wheel speed sensor"},
+    {"id": "OPHEV_ABS_FR_VSS", "path": "Movement", "fmt": {"bix": 16, "len": 16, "max": 655.35, "div": 100, "unit": "kilometersPerHour" }, "name": "Front right wheel speed sensor"},
+    {"id": "OPHEV_ABS_RL_VSS", "path": "Movement", "fmt": {"bix": 32, "len": 16, "max": 655.35, "div": 100, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed sensor"},
+    {"id": "OPHEV_ABS_RR_VSS", "path": "Movement", "fmt": {"bix": 48, "len": 16, "max": 655.35, "div": 100, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed sensor"}
+  ]},
+{ "hdr": "796", "rax": "797", "fcm1": true, "dbg": true, "cmd": {"21": "20"}, "freq": 0.25,
+  "signals": [
+    {"id": "OPHEV_POWER_STEER_MOTOR",             "path": "Engine", "fmt": {           "len": 8, "max": 127, "min": -128, "add": -128, "unit": "amps" }, "name": "Power steering, motor, current"},
+    {"id": "OPHEV_POWER_STEER_MOTOR_TGT",         "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 127, "min": -128, "add": -128, "unit": "amps" }, "name": "Power steering, motor, current, unlimited, target"},
+    {"id": "OPHEV_POWER_STEER_MOTOR_CURRENT_TGT", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 127, "min": -128, "add": -128, "unit": "amps" }, "name": "Power steering, motor, current, target"}
+  ]},
+{ "hdr": "7B6", "rax": "7B7", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AWC_4WD_MODE",                "path": "Drivetrain", "fmt": {           "len": 8, "max": 255,                           "unit": "scalar" }, "name": "4WD mode"},
+    {"id": "OPHEV_AWC_CENTER_COUPLING_CUR_AMP", "path": "Drivetrain", "fmt": {"bix": 40, "len": 8, "max": 3.06, "mul": 3.06, "div": 255, "unit": "scalar" }, "name": "Center coupling current"}
+  ]},
+{ "hdr": "7B6", "rax": "7B7", "fcm1": true, "dbg": true, "cmd": {"21": "04"}, "freq": 0.25, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AWC_STEERING_ANGLE",           "path": "Drivetrain", "fmt": {           "len": 16, "max": 30719.5, "min": -2048, "div": 2, "add": -2048, "unit": "degrees" }, "name": "Steering angle"},
+    {"id": "OPHEV_AWC_STEERING_VSS_DEGREES_SEC", "path": "Drivetrain", "fmt": {"bix": 16, "len": 16, "max": 30719.5, "min": -2048, "div": 2, "add": -2048, "unit": "scalar"  }, "name": "Steering speed"},
+    {"id": "OPHEV_AWC_STEERING_STS",             "path": "Drivetrain", "fmt": {"bix": 32, "len": 8,  "max": 255,                                           "unit": "scalar"  }, "name": "Steering status"}
+  ]},
+{ "hdr": "7B6", "rax": "7B7", "fcm1": true, "dbg": true, "cmd": {"21": "05"}, "freq": 0.25, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AWC_ACCELERATOR_POSITION", "path": "Drivetrain", "fmt": {          "len": 8,  "max": 99.6,  "mul": 100, "div": 256, "unit": "percent" }, "name": "Accelerator position"},
+    {"id": "OPHEV_AWC_RPM",                  "path": "Drivetrain", "fmt": {"bix": 8, "len": 16, "max": 65535,                         "unit": "rpm"     }, "name": "Engine RPM",           "suggestedMetric": "engineSpeed"}
+  ]},
+{ "hdr": "7B6", "rax": "7B7", "fcm1": true, "dbg": true, "cmd": {"21": "07"}, "freq": 0.25, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AWC_FL_ROT", "path": "Drivetrain", "fmt": {            "len": 16, "max": 32767.5, "div": 2,   "unit": "rpm"               }, "name": "Front left wheel rotation"},
+    {"id": "OPHEV_AWC_FR_ROT", "path": "Drivetrain", "fmt": {"bix": 16,  "len": 16, "max": 32767.5, "div": 2,   "unit": "rpm"               }, "name": "Front right wheel rotation"},
+    {"id": "OPHEV_AWC_RL_ROT", "path": "Drivetrain", "fmt": {"bix": 32,  "len": 16, "max": 32767.5, "div": 2,   "unit": "rpm"               }, "name": "Rear left wheel rotation"},
+    {"id": "OPHEV_AWC_RR_ROT", "path": "Drivetrain", "fmt": {"bix": 48,  "len": 16, "max": 32767.5, "div": 2,   "unit": "rpm"               }, "name": "Rear right wheel rotation"},
+    {"id": "OPHEV_AWC_FL_VSS", "path": "Drivetrain", "fmt": {"bix": 64,  "len": 16, "max": 655.35,  "div": 100, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"},
+    {"id": "OPHEV_AWC_FR_VSS", "path": "Drivetrain", "fmt": {"bix": 80,  "len": 16, "max": 655.35,  "div": 100, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"},
+    {"id": "OPHEV_AWC_RL_VSS", "path": "Drivetrain", "fmt": {"bix": 96,  "len": 16, "max": 655.35,  "div": 100, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"},
+    {"id": "OPHEV_AWC_RR_VSS", "path": "Drivetrain", "fmt": {"bix": 112, "len": 16, "max": 655.35,  "div": 100, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
+  ]},
+{ "hdr": "7B6", "rax": "7B7", "fcm1": true, "dbg": true, "cmd": {"21": "0A"}, "freq": 0.25, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AWC_YAW_RATE_DEGREES_SEC", "path": "Drivetrain", "fmt": {           "len": 16, "max": 327.67, "min": -327.68, "div": 100, "add": -327.68, "unit": "scalar"                 }, "name": "Yaw rate"},
+    {"id": "OPHEV_AWC_LATERAL_G",            "path": "Drivetrain", "fmt": {"bix": 16, "len": 8,  "max": 12.7,   "min": -12.8,   "div": 10,  "add": -12.8,   "unit": "metersPerSecondSquared" }, "name": "Lateral acceleration"},
+    {"id": "OPHEV_AWC_LONGITUDINAL_G",       "path": "Drivetrain", "fmt": {"bix": 24, "len": 8,  "max": 12.7,   "min": -12.8,   "div": 10,  "add": -12.8,   "unit": "metersPerSecondSquared" }, "name": "Longitudinal acceleration"}
+  ]},
+{ "hdr": "7B6", "rax": "7B7", "fcm1": true, "dbg": true, "cmd": {"21": "0D"}, "freq": 0.25, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AWC_BRAKE_STS",     "path": "Control",    "fmt": {"bix": 7,  "len": 1,  "max": 1,                                            "unit": "offon"      }, "name": "Brake status"},
+    {"id": "OPHEV_AWC_PARKING_BRAKE", "path": "Control",    "fmt": {"bix": 15, "len": 1,  "max": 1,                                            "unit": "offon"      }, "name": "Parking brake"},
+    {"id": "OPHEV_AWC_IGN_STS",       "path": "Drivetrain", "fmt": {"bix": 16, "len": 8,  "max": 255,                                          "unit": "scalar"     }, "name": "Ignition status"},
+    {"id": "OPHEV_AWC_ACC_V",         "path": "Drivetrain", "fmt": {"bix": 24, "len": 8,  "max": 25.5,                  "div": 10,             "unit": "volts"      }, "name": "Accessory voltage"},
+    {"id": "OPHEV_AWC_IOD_FUSE",      "path": "Drivetrain", "fmt": {"bix": 39, "len": 1,  "max": 1,                                            "unit": "offon"      }, "name": "Ignition-off draw fuse"},
+    {"id": "OPHEV_AWC_ODO",           "path": "Drivetrain", "fmt": {"bix": 40, "len": 24, "max": 1677721.5,             "div": 10,             "unit": "kilometers" }, "name": "Odometer",                "suggestedMetric": "odometer"},
+    {"id": "OPHEV_AWC_AAT",           "path": "Drivetrain", "fmt": {"bix": 64, "len": 8,  "max": 87.5,      "min": -40, "div": 2,  "add": -40, "unit": "celsius"    }, "name": "Ambient air temperature"},
+    {"id": "OPHEV_AWC_IGN_OFF_TIME",  "path": "Drivetrain", "fmt": {"bix": 72, "len": 8,  "max": 255,                                          "unit": "minutes"    }, "name": "Ignition off time"}
+  ]},
+{ "hdr": "7B6", "rax": "7B7", "fcm1": true, "dbg": true, "cmd": {"21": "13"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AWC_IG1",   "path": "Drivetrain", "fmt": {"bix": 7,  "len": 1,  "max": 1,               "unit": "offon" }, "name": "Ignition 1"},
+    {"id": "OPHEV_AWC_ECU_V", "path": "Drivetrain", "fmt": {"bix": 8,  "len": 16, "max": 1023, "div": 64, "unit": "volts" }, "name": "Module voltage"},
+    {"id": "OPHEV_AWC_EXT_V", "path": "Drivetrain", "fmt": {"bix": 24, "len": 16, "max": 1023, "div": 64, "unit": "volts" }, "name": "External voltage"}
+  ]},
+{ "hdr": "7B6", "rax": "7B7", "fcm1": true, "dbg": true, "cmd": {"21": "16"}, "freq": 0.25, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AWC_SAS", "path": "Drivetrain", "fmt": {"bix": 8, "len": 8, "max": 15.875, "min": -16, "div": 8, "add": -16, "unit": "degrees" }, "name": "Steering angle sensor"}
+  ]},
+{ "hdr": "7B6", "rax": "7B7", "fcm1": true, "dbg": true, "cmd": {"21": "30"}, "freq": 30, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AWC_MILEAGE", "path": "Drivetrain", "fmt": {"bix": 16, "len": 24, "max": 1677721.5, "div": 10, "unit": "kilometers" }, "name": "Mileage"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "01"}, "freq": 0.25, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MPI_BATTERY_V",       "path": "Engine", "fmt": {           "len": 8,  "max": 18,   "mul": 18,   "div": 255, "unit": "volts"             }, "name": "Battery voltage",    "suggestedMetric": "starterBatteryVoltage"},
+    {"id": "OPHEV_MPI_VSS",             "path": "Engine", "fmt": {"bix": 8,  "len": 8,  "max": 200,  "mul": 2,                "unit": "kilometersPerHour" }, "name": "Vehicle speed",      "suggestedMetric": "speed"},
+    {"id": "OPHEV_MPI_CRANK_ANGLE_SNS", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 8000,              "div": 8,   "unit": "rpm"               }, "name": "Crank angle sensor"},
+    {"id": "OPHEV_MPI_TGT_IDLE_RPM",    "path": "Engine", "fmt": {"bix": 32, "len": 8,  "max": 2000, "mul": 2000, "div": 255, "unit": "rpm"               }, "name": "Target idle RPM"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "02"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MPI_IAT", "path": "Engine", "fmt": {           "len": 8, "max": 120,   "min": -40,                 "add": -40, "unit": "celsius" }, "name": "Intake air temperature"},
+    {"id": "OPHEV_MPI_ECT", "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 215,   "min": -40,                 "add": -40, "unit": "celsius" }, "name": "Engine coolant temperature", "suggestedMetric": "engineCoolantTemperature"},
+    {"id": "OPHEV_BP",      "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 49.17,             "mul": 0.19285,             "unit": "psi"     }, "name": "Boost pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "03"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MPI_MANIFOLD_PRES",  "path": "Engine", "fmt": {           "len": 16, "max": 126,             "div": 512, "unit": "kilopascal" }, "name": "Manifold pressure"},
+    {"id": "OPHEV_MPI_AIR_FLOW_SNS_V", "path": "Engine", "fmt": {"bix": 16, "len": 8,  "max": 5,   "mul": 5,   "div": 255, "unit": "volts"      }, "name": "Air flow sensor voltage"},
+    {"id": "OPHEV_MPI_ENGINE_LOAD",    "path": "Engine", "fmt": {"bix": 32, "len": 8,  "max": 100, "mul": 100, "div": 255, "unit": "percent"    }, "name": "Engine load",             "suggestedMetric": "engineLoad"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "04"}, "freq": 0.25, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MPI_THROTTLE_POSITION_MAIN",     "path": "Engine", "fmt": {           "len": 8, "max": 5, "mul": 5, "div": 255, "unit": "volts" }, "name": "Main throttle position"},
+    {"id": "OPHEV_MPI_THROTTLE_POSITION_SUB",      "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 5, "mul": 5, "div": 255, "unit": "volts" }, "name": "Sub throttle position"},
+    {"id": "OPHEV_MPI_TGT_THROTTLE_POSITION_MAIN", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 5, "mul": 5, "div": 255, "unit": "volts" }, "name": "Target main throttle position"},
+    {"id": "OPHEV_MPI_ACCELERATOR_POSITION_MAIN",  "path": "Engine", "fmt": {"bix": 24, "len": 8, "max": 5, "mul": 5, "div": 255, "unit": "volts" }, "name": "Main accelerator position"},
+    {"id": "OPHEV_MPI_ACCELERATOR_POSITION_SUB",   "path": "Engine", "fmt": {"bix": 32, "len": 8, "max": 5, "mul": 5, "div": 255, "unit": "volts" }, "name": "Sub accelerator position"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "05"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MPI_IGN_ADVANCE",         "path": "Engine", "fmt": {          "len": 8, "max": 235,   "min": -20,           "add": -20, "unit": "scalar"       }, "name": "Ignition advance"},
+    {"id": "OPHEV_MPI_INJECTOR_DRIVE_TIME", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 63.75,             "div": 4,             "unit": "milliseconds" }, "name": "Injector drive time"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "07"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MPI_SHORT_TERM_FUEL_CORRECTION", "path": "Fuel", "fmt": {"bix": 8,  "len": 8, "max": 49.8, "min": -50.19, "mul": 20, "div": 51, "add": -50.196078, "unit": "percent" }, "name": "Short term fuel correction", "suggestedMetric": "shortTermFuelTrim"},
+    {"id": "OPHEV_MPI_LONG_TERM_FUEL_CORRECTION",  "path": "Fuel", "fmt": {"bix": 16, "len": 8, "max": 49.8, "min": -50.19, "mul": 20, "div": 51, "add": -50.196078, "unit": "percent" }, "name": "Long term fuel correction"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "08"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MPI_DETONATION_RETARD",       "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 90,  "mul": 90,  "div": 255, "unit": "scalar"  }, "name": "Detonation retard"},
+    {"id": "OPHEV_MPI_DETONATION_CTRL_LEARNED", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Detonation control learned"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "0A"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MPI_VVT_PHASE_ANGLE", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 79.375, "min": -80, "div": 1.6, "add": -80, "unit": "degrees" }, "name": "Variable valve timing phase angle"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "0E"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MPI_COOLING_FAN_DUTY", "path": "Engine", "fmt": { "len": 8, "max": 100.011, "mul": 0.3922, "unit": "percent" }, "name": "Cooling fan duty"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "0F"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MPI_PURGE_VALVE_CTRL", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Purge valve control"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "12"}, "freq": 0.25, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MPI_TGT_THROTTLE_CTRL",   "path": "Engine", "fmt": {           "len": 16, "max": 5,               "div": 512, "unit": "volts"   }, "name": "Target throttle control"},
+    {"id": "OPHEV_MPI_THROTTLE_CTRL_SERVO", "path": "Engine", "fmt": {"bix": 16, "len": 8,  "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Throttle control servo"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "1A"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MPI_CALCULATED_LOAD", "path": "Engine", "fmt": {          "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Calculated load", "suggestedMetric": "engineLoad"},
+    {"id": "OPHEV_MPI_ABSOLUTE_LOAD",   "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Absolute load",   "suggestedMetric": "absoluteEngineLoad"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "1D"}, "freq": 0.25, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MPI_IDLE_STS",                "path": "Engine",  "fmt": {           "len": 1, "max": 1, "unit": "offon" }, "name": "Idle status"},
+    {"id": "OPHEV_MPI_CRANKING_SIG_ST",         "path": "Engine",  "fmt": {"bix": 1,  "len": 1, "max": 1, "unit": "offon" }, "name": "Cranking signal"},
+    {"id": "OPHEV_MPI_OFF_COND",                "path": "Engine",  "fmt": {"bix": 4,  "len": 1, "max": 1, "unit": "offon" }, "name": "Off condition"},
+    {"id": "OPHEV_MPI_NEUTRAL_STS",             "path": "Engine",  "fmt": {"bix": 6,  "len": 1, "max": 1, "unit": "offon" }, "name": "Neutral status"},
+    {"id": "OPHEV_MPI_IGN_SWITCH",              "path": "Engine",  "fmt": {"bix": 15, "len": 1, "max": 1, "unit": "offon" }, "name": "Ignition switch"},
+    {"id": "OPHEV_MPI_NORMAL_BRAKE_CLOSED_STS", "path": "Control", "fmt": {"bix": 30, "len": 1, "max": 1, "unit": "offon" }, "name": "Normal brake closed status"},
+    {"id": "OPHEV_MPI_BRAKE_SWITCH",            "path": "Control", "fmt": {"bix": 31, "len": 1, "max": 1, "unit": "offon" }, "name": "Brake switch"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "1E"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_MPI_ENGINE_CTRL_RELAY",    "path": "Engine", "fmt": {"bix": 2, "len": 1, "max": 1, "unit": "offon" }, "name": "Engine control relay"},
+    {"id": "OPHEV_MPI_THROTTLE_CTRL_RELAY",  "path": "Engine", "fmt": {"bix": 5, "len": 1, "max": 1, "unit": "offon" }, "name": "Throttle control relay"},
+    {"id": "OPHEV_MPI_FUEL_PUMP_RELAY",      "path": "Fuel",   "fmt": {"bix": 6, "len": 1, "max": 1, "unit": "offon" }, "name": "Fuel pump relay"},
+    {"id": "OPHEV_MPI_A_C_COMPRESSOR_RELAY", "path": "Engine", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "offon" }, "name": "A/C compressor relay"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "4E"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_AC_COMPRESSOR", "path": "Engine", "fmt": {"bix": 24, "len": 1, "max": 1, "unit": "offon" }, "name": "A/C compressor"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "A8"}, "freq": 1, "filter": { "to": 2021 },
+  "signals": [
+    {"id": "OPHEV_COOLING_FAN_DUTY", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 255, "unit": "percent" }, "name": "Cooling fan duty"}
+  ]},
+{ "hdr": "7E2", "rax": "7EA", "fcm1": true, "dbg": true, "cmd": {"21": "03"}, "freq": 1,
+  "signals": [
+    {"id": "OPHEV_EV_BRAKE_P", "path": "Control", "fmt": {"bix": 104, "len": 8, "max": 255, "unit": "bars" }, "name": "Brake pressure"}
+  ]},
+{ "hdr": "7E2", "rax": "7EA", "fcm1": true, "dbg": true, "cmd": {"21": "24"}, "freq": 1,
+  "signals": [
+    {"id": "OPHEV_EV_SEL_P", "path": "Drivetrain", "fmt": {"bix": 24, "len": 1, "max": 1,  "unit": "scalar" }, "name": "Selector in p"},
+    {"id": "OPHEV_EV_SEL_R", "path": "Drivetrain", "fmt": {"bix": 25, "len": 1, "max": 1,  "unit": "scalar" }, "name": "Selector in r"},
+    {"id": "OPHEV_EV_SEL_N", "path": "Drivetrain", "fmt": {"bix": 26, "len": 1, "max": 1,  "unit": "scalar" }, "name": "Selector in n"},
+    {"id": "OPHEV_EV_SEL_D", "path": "Drivetrain", "fmt": {"bix": 27, "len": 1, "max": 1,  "unit": "scalar" }, "name": "Selector in d"},
+    {"id": "OPHEV_EV_SEL_B", "path": "Drivetrain", "fmt": {"bix": 28, "len": 4, "max": 15, "unit": "scalar" }, "name": "Regenerative braking level"}
+  ]},
+{ "hdr": "DA15", "rax": "15", "cmd": {"22": "4000"}, "freq": 5, "dbgfilter": { "to": 2022, "from": 2024 },
+  "signals": [
+    {"id": "OPHEV_ENG_CTRL_MODULE_V", "path": "Battery", "fmt": { "len": 8, "max": 18.66, "mul": 183, "div": 2500, "unit": "volts" }, "name": "Engine control module voltage"}
+  ]},
+{ "hdr": "DA15", "rax": "15", "cmd": {"22": "4002"}, "freq": 0.25, "dbgfilter": { "to": 2022, "from": 2024 },
+  "signals": [
+    {"id": "OPHEV_RPM", "path": "Movement", "fmt": { "len": 8, "max": 6375, "mul": 25, "unit": "rpm" }, "name": "Engine speed"}
+  ]},
+{ "hdr": "DA2D", "rax": "2D", "cmd": {"22": "4B00"}, "freq": 0.25, "filter": { "from": 2021 }, "dbgfilter": { "to": 2022, "years": [2024], "from": 2026 },
+  "signals": [
+    {"id": "OPHEV_FL_VSS", "path": "Movement", "fmt": { "len": 16, "max": 655.35, "mul": 100, "div": 10000, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"}
+  ]},
+{ "hdr": "DA2D", "rax": "2D", "cmd": {"22": "4B01"}, "freq": 0.25, "filter": { "from": 2021 }, "dbgfilter": { "to": 2022, "years": [2024], "from": 2026 },
+  "signals": [
+    {"id": "OPHEV_FR_VSS", "path": "Movement", "fmt": { "len": 16, "max": 655.35, "mul": 100, "div": 10000, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"}
+  ]},
+{ "hdr": "DA2D", "rax": "2D", "cmd": {"22": "4B02"}, "freq": 0.25, "filter": { "from": 2021 }, "dbgfilter": { "to": 2022, "years": [2024], "from": 2026 },
+  "signals": [
+    {"id": "OPHEV_RL_VSS", "path": "Movement", "fmt": { "len": 16, "max": 655.35, "mul": 100, "div": 10000, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
+  ]},
+{ "hdr": "DA2D", "rax": "2D", "cmd": {"22": "4B03"}, "freq": 0.25, "filter": { "from": 2021 }, "dbgfilter": { "to": 2022, "years": [2024], "from": 2026 },
+  "signals": [
+    {"id": "OPHEV_RR_VSS", "path": "Movement", "fmt": { "len": 16, "max": 655.35, "mul": 100, "div": 10000, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
+  ]}
+],
+"signalGroups": [
+  {"id": "OPHEV_BMU_CELLS_V", "path": "Battery", "matchingRegex": "OPHEV_BMU_(CELL_\\d+)_V", "name": "Cell voltages", "suggestedMetricGroup": "batteryModulesVoltage"}
 ]
 }

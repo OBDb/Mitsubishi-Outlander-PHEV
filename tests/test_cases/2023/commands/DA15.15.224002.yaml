@@ -1,0 +1,5 @@
+command_id: DA15.15.224002
+test_cases:
+- expected_values:
+    OPHEV_RPM: 0
+  response: 18DAF115056240020000

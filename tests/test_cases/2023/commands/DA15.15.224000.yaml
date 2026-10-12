@@ -1,0 +1,8 @@
+command_id: DA15.15.224000
+test_cases:
+- expected_values:
+    OPHEV_ENG_CTRL_MODULE_V: 12.8832
+  response: 18DAF11504624000B0
+- expected_values:
+    OPHEV_ENG_CTRL_MODULE_V: 12.9564
+  response: 18DAF11504624000B1

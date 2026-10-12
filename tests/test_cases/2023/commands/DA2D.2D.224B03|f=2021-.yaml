@@ -1,0 +1,20 @@
+command_id: DA2D.2D.224B03|f=2021-
+test_cases:
+- expected_values:
+    OPHEV_RR_VSS: 0
+  response: 18DAF12D05624B030000
+- expected_values:
+    OPHEV_RR_VSS: 28.8
+  response: 18DAF12D05624B030B40
+- expected_values:
+    OPHEV_RR_VSS: 55.68
+  response: 18DAF12D05624B0315C0
+- expected_values:
+    OPHEV_RR_VSS: 56.64
+  response: 18DAF12D05624B031620
+- expected_values:
+    OPHEV_RR_VSS: 57.43
+  response: 18DAF12D05624B03166F
+- expected_values:
+    OPHEV_RR_VSS: 63.45
+  response: 18DAF12D05624B0318C9
