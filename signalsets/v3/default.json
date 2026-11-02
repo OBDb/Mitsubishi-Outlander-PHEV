@@ -143,7 +143,7 @@
   "signals": [
     {"id": "OPHEV_CMU_9_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Cell monitoring unit 9 module voltage"}
   ]},
-{ "hdr": "6A0", "rax": "514", "fcm1": true, "dbg": true, "cmd": {"21": "A3"}, "freq": 30, "filter": { "to": 2021 },
+{ "hdr": "6A0", "rax": "514", "fcm1": true, "dbg": true, "cmd": {"21": "A3"}, "freq": 1, "filter": { "to": 2021 },
   "signals": [
     {"id": "OPHEV_FLI", "path": "Fuel", "fmt": {"bix": 16, "len": 8, "max": 100, "add": -16, "unit": "percent" }, "name": "Fuel level", "suggestedMetric": "fuelTankLevel"}
   ]},
