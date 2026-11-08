@@ -21,3 +21,12 @@ test_cases:
 - expected_values:
     OPHEV_ODO_743: 57180
   response: 76306620E0100DF5C
+- expected_values:
+    OPHEV_ODO_743: 57811
+  response: 76306620E0100E1D3
+- expected_values:
+    OPHEV_ODO_743: 57812
+  response: 76306620E0100E1D4
+- expected_values:
+    OPHEV_ODO_743: 57813
+  response: 76306620E0100E1D5
