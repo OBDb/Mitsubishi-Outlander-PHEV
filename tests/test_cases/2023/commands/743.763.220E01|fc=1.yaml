@@ -4,29 +4,8 @@ test_cases:
     OPHEV_ODO_743: 56021
   response: 76306620E0100DAD5
 - expected_values:
-    OPHEV_ODO_743: 56022
-  response: 76306620E0100DAD6
-- expected_values:
-    OPHEV_ODO_743: 56059
-  response: 76306620E0100DAFB
-- expected_values:
-    OPHEV_ODO_743: 56061
-  response: 76306620E0100DAFD
-- expected_values:
-    OPHEV_ODO_743: 56062
-  response: 76306620E0100DAFE
-- expected_values:
     OPHEV_ODO_743: 56063
   response: 76306620E0100DAFF
 - expected_values:
-    OPHEV_ODO_743: 57180
-  response: 76306620E0100DF5C
-- expected_values:
-    OPHEV_ODO_743: 57811
-  response: 76306620E0100E1D3
-- expected_values:
-    OPHEV_ODO_743: 57812
-  response: 76306620E0100E1D4
-- expected_values:
-    OPHEV_ODO_743: 57813
-  response: 76306620E0100E1D5
+    OPHEV_ODO_743: 58178
+  response: 76306620E0100E342
