@@ -197,19 +197,19 @@
   "signals": [
     {"id": "OPHEV_FUEL_METER", "path": "Fuel", "fmt": { "len": 8, "max": 204, "mul": 4, "div": 5, "unit": "liters" }, "name": "Fuel meter"}
   ]},
-{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E25"}, "freq": 15, "filter": { "from": 2021 }, "dbgfilter": { "to": 2022, "years": [2024], "from": 2026 },
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E25"}, "freq": 15, "filter": { "from": 2021 },
   "signals": [
     {"id": "OPHEV_BCM_TP_FR", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "nullmin": 0, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"}
   ]},
-{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E26"}, "freq": 15, "filter": { "from": 2021 }, "dbgfilter": { "to": 2022, "years": [2024], "from": 2026 },
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E26"}, "freq": 15, "filter": { "from": 2021 },
   "signals": [
     {"id": "OPHEV_BCM_TP_FL", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "nullmin": 0, "unit": "psi" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
   ]},
-{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E27"}, "freq": 15, "filter": { "from": 2021 }, "dbgfilter": { "to": 2022, "from": 2024 },
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E27"}, "freq": 15, "filter": { "from": 2021 },
   "signals": [
     {"id": "OPHEV_BCM_TP_RR", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "nullmin": 0, "unit": "psi" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
   ]},
-{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E28"}, "freq": 15, "filter": { "from": 2021 }, "dbgfilter": { "to": 2022, "years": [2024], "from": 2026 },
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E28"}, "freq": 15, "filter": { "from": 2021 },
   "signals": [
     {"id": "OPHEV_BCM_TP_RL", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "nullmin": 0, "unit": "psi" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
   ]},
